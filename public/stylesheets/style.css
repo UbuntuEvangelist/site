@@ -163,28 +163,6 @@ blockquote {
     font-weight: 400;
 }
 
-/* Landing */
-.landing {
-    background: url('../images/backgrounds/background.jpg');
-    height:100vh;
-    width: 100%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
-.landing-header {
-    font-family: 'samarkanoblique';
-    color: #ffffff;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.7);
-}
-
-.landing-description {
-    color: #ffffff;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.7);
-}
-
 /* Stories */
 .stories {
     background-color: #ffffff;
@@ -220,44 +198,29 @@ blockquote {
     float: left;
 }
 
-.btn{
-    text-decoration: none;
-    color: #fff;
-    background-color: #4CAF50;
-    text-align: center;
-    letter-spacing: .5px;
-    transition: .2s ease-out;
-    cursor: pointer;
-}
+/* buttons */
 
-.btn-large {
+.btn {
+    box-shadow: 0 0.15em 0.5em 0 rgba(0,0,0,0.5);
+    border: 0.15em solid #212121;
+    background-color: transparent;
+    color: rgba(33, 33, 33, 0.75);
     text-decoration: none;
-    color: #fff;
-    background-color: #4CAF50;
     text-align: center;
-    letter-spacing: .5px;
-    transition: .2s ease-out;
+    letter-spacing: 0.15em;
+    transition: all 500ms;
     cursor: pointer;
 }
 
 .btn:hover {
-    text-decoration: none;
-    color: #FF5252;
+    box-shadow: 0 0.15em 0.25em 0 rgba(0,0,0,0.25);
+    border-color: #4CAF50;
     background-color: #4CAF50;
-    text-align: center;
-    letter-spacing: .5px;
-    transition: .2s ease-out;
-    cursor: pointer;
+    color: #fff;
 }
 
-.btn-large:hover {
-    text-decoration: none;
-    color: #FF5252;
-    background-color: #4CAF50;
-    text-align: center;
-    letter-spacing: .5px;
-    transition: .2s ease-out;
-    cursor: pointer;
+.btn:active {
+    box-shadow: 0 -0.15em 0.25em 0 rgba(0,0,0,0.25);
 }
 
 
@@ -346,22 +309,6 @@ blockquote {
 .overlay-hugeinc.close ul {
     -webkit-transform: translateY(25%) rotateX(-35deg);
     transform: translateY(25%) rotateX(-35deg);
-}
-
-/* Menu Button*/
-.topright {
-    cursor: pointer;
-    color: #4CAF50;
-    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
-    position: fixed;
-    top: 15px;
-    right: 25px;
-    width: 50px;
-    z-index: 999999;
-}
-
-.topright:hover {
-    color: #FF5252;
 }
 
 .remove-font-styles {
@@ -555,12 +502,6 @@ and (min-width : 321px) {
     }
 }
 
-/* Smartphones (portrait) ----------- */
-@media only screen
-and (max-width : 320px) {
-    /* Styles */
-}
-
 /* iPads (portrait and landscape) ----------- */
 @media only screen
 and (min-device-width : 768px)
@@ -642,14 +583,6 @@ and (min-width : 1824px) {
     }
 }
 
-/* iPhone 4 ----------- */
-@media
-only screen and (-webkit-min-device-pixel-ratio : 1.5),
-only screen and (min-device-pixel-ratio : 1.5) {
-/* Styles */
-}
-
-
 /* damir's changes */
 
 /* @TODO: add prefixes to css3 rules (or preferably install a css autoprefixer)
@@ -702,11 +635,29 @@ only screen and (min-device-pixel-ratio : 1.5) {
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.5)),url('../images/backgrounds/background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
 }
 
 #landing .landing-header {
     margin: 0.5em auto;
+    padding: 0.5em;
+    border: 0.05em solid #fff;
+    box-shadow: 0 0 0.15em 0 #4CAF50;
+    background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,0) 0%, rgba(255,255,255,0.15) 100%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,0) 0%,rgba(255,255,255,0.15) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,0) 0%, rgba(255,255,255,0.15) 100%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,0) 0%,rgba(255,255,255,0.15) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center, rgba(255,255,255,0) 0%,rgba(255,255,255,0.15) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     font-size: 3rem;
+    font-weight: 400;
+}
+
+#landing .landing-header:hover {
+    box-shadow: 0 0 0.25em 0 #4CAF50;
+    background: rgba(255,255,255,0.15);
 }
 
 #landing .landing-description {
@@ -715,7 +666,12 @@ only screen and (min-device-pixel-ratio : 1.5) {
 
 #landing .landing-description .morphext {
     display: block;
-    font-weight: 700;
+    text-shadow: 0.05em 0.10em 0.15em rgba(0, 0, 0, 0.5);
+    font-family: 'samarkanoblique', 'Open Sans', Helvetica, sans-serif;
+    font-size: 2.5rem;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: 0.5em;
 }
 
 @media (min-width: 768px) {
@@ -767,4 +723,39 @@ only screen and (min-device-pixel-ratio : 1.5) {
     #site .container {
         margin: 6em auto;
     }
+}
+
+/* site more */
+
+@media (min-width: 480px) {
+
+    #more .work {
+        padding-right: 1.5em;
+    }
+
+    #more .stories {
+        padding-left: 1.5em;
+    }
+}
+
+@media (min-width: 768px) {
+
+    #more .work {
+        padding-right: 2.5em;
+    }
+
+    #more .stories {
+        padding-left: 2.5em;
+    }
+}
+
+/* site facts */
+
+#facts .facts {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/backgrounds/facts_background.jpg');
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    text-align: center;
+
 }
