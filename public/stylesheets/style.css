@@ -646,7 +646,7 @@ and (min-width : 1824px) {
 @media
 only screen and (-webkit-min-device-pixel-ratio : 1.5),
 only screen and (min-device-pixel-ratio : 1.5) {
-    /* Styles */
+/* Styles */
 }
 
 
@@ -654,7 +654,17 @@ only screen and (min-device-pixel-ratio : 1.5) {
 
 /* @TODO: add prefixes to css3 rules (or preferably install a css autoprefixer)
 
-/*  global > navbar */
+/* global > helpers */
+
+.line-break {
+    display: block;
+}
+
+.text-stroke {
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5), 1px -1px 0 rgba(0, 0, 0, 0.5), -1px 1px 0 rgba(0, 0, 0, 0.5), 1px 1px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* global > navbar */
 
 #trigger-overlay {
     position: fixed;
@@ -675,5 +685,66 @@ only screen and (min-device-pixel-ratio : 1.5) {
     background-color: #FF5252;
 }
 
-/* landing > introduction */
+/* header landing */
+
+#landing {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 75vh;
+    height: 75vh;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+#landing .landing-header {
+    margin: 0.5em auto;
+    font-size: 3rem;
+}
+
+#landing .landing-description {
+    font-size: 1.25rem;
+}
+
+#landing .landing-description .morphext {
+    display: block;
+    font-weight: 700;
+}
+
+@media (min-width: 480px) {
+    #landing .landing-header {
+        font-size: 4rem;
+    }
+}
+
+@media (min-width: 768px) {
+    #landing .landing-header {
+        font-size: 5rem;
+    }
+
+    #landing .landing-description {
+        font-size: 1.5rem;
+    }
+}
+
+/* site */
+
+#site {
+    margin-top: 2em;
+}
+
+#site .container {
+    margin: 1em auto;
+}
+
+#site .container > .row .col {
+    margin: 1em auto;
+}
 
