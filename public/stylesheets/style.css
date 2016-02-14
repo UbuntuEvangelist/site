@@ -1,3 +1,7 @@
+/* typography */
+
+/* @TODO: find new font */
+
 @font-face {
     font-family: 'samarkanoblique';
     src: url('../fonts/samaro__-webfont.eot');
@@ -10,25 +14,12 @@
     font-style: normal;
 }
 
-
-::selection {
-    color: #FF5252;
-    background:#4CAF50;
-}
-
-body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-    font-family: 'Open Sans', sans-serif;
-}
-
 p {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', Helvetica, sans-serif;
 }
 
-main {
-    flex: 1 0 auto;
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Open Sans', Helvetica, sans-serif;
 }
 
 h1 {
@@ -47,40 +38,11 @@ h4 {
     font-weight: 300;
 }
 
-.height-200 {
-    max-height: 200px;
-}
+/* links */
 
 a {
-    color: #ffffff;
     text-decoration: none;
     -webkit-tap-highlight-color: transparent;
-}
-
-.collection-item a {
-    color: #000000;
-    text-decoration: none;
-    -webkit-tap-highlight-color: transparent;
-}
-
-nav {
-    color: #fff;
-    background-color: #4CAF50;
-    width: 100%;
-    height: 56px;
-    line-height: 56px;
-}
-
-.card-title {
-    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
-}
-
-.card .card-action a:not(.btn):not(.btn-large):not(.btn-floating) {
-    color: #4CAF50;
-}
-
-.card .card-action a:hover:not(.btn):not(.btn-large):not(.btn-floating) {
-    color: #FF5252;
 }
 
 a {
@@ -95,6 +57,52 @@ a:hover {
     -webkit-tap-highlight-color: transparent;
 }
 
+/* layout */
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    font-family: 'Open Sans', sans-serif;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+/* ui elements */
+
+nav {
+    color: #fff;
+    background-color: #4CAF50;
+    width: 100%;
+    height: 56px;
+    line-height: 56px;
+}
+
+/* helpers */
+
+::selection {
+    color: #FF5252;
+    background:#4CAF50;
+}
+
+.height-200 {
+    max-height: 200px;
+}
+
+.card-title {
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-floating) {
+    color: #4CAF50;
+}
+
+.card .card-action a:hover:not(.btn):not(.btn-large):not(.btn-floating) {
+    color: #FF5252;
+}
+
 footer.page-footer {
     margin-top: 0px;
     padding-top: 0px;
@@ -107,6 +115,13 @@ blockquote {
 }
 
 /* Collections */
+
+
+.collection-item a {
+    color: #000000;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
 
 .collection-item a:hover {
     color: #4CAF50;
@@ -651,7 +666,7 @@ and (min-width : 1824px) {
     background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,0) 0%, rgba(255,255,255,0.15) 100%); /* FF3.6-15 */
     background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,0) 0%,rgba(255,255,255,0.15) 100%); /* Chrome10-25,Safari5.1-6 */
     background: radial-gradient(ellipse at center, rgba(255,255,255,0) 0%,rgba(255,255,255,0.15) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 400;
 }
 
@@ -668,7 +683,7 @@ and (min-width : 1824px) {
     display: block;
     text-shadow: 0.05em 0.10em 0.15em rgba(0, 0, 0, 0.5);
     font-family: 'samarkanoblique', 'Open Sans', Helvetica, sans-serif;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     font-style: italic;
     font-weight: 400;
     letter-spacing: 0.5em;
@@ -676,7 +691,7 @@ and (min-width : 1824px) {
 
 @media (min-width: 768px) {
     #landing .landing-header {
-        font-size: 4rem;
+        font-size: 3.5rem;
     }
 
     #landing .landing-description {
@@ -686,7 +701,11 @@ and (min-width : 1824px) {
 
 @media (min-width: 980px) {
     #landing .landing-header {
-        font-size: 5rem;
+        font-size: 4.5rem;
+    }
+
+    #landing .landing-description .morphext {
+        font-size: 1.75rem;
     }
 }
 
@@ -751,11 +770,29 @@ and (min-width : 1824px) {
 
 /* site facts */
 
-#facts .facts {
+#facts {
+    padding: 2em 1em;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/backgrounds/facts_background.jpg');
     background-position: center center;
     background-attachment: fixed;
     background-size: cover;
     text-align: center;
+}
 
+@media (min-width: 480px) {
+
+    #facts {
+        padding: 3em 1em;
+    }
+}
+
+@media (min-width: 768px) {
+
+    #facts {
+        padding: 6em 1em;
+    }
+}
+
+#facts .container {
+    max-width: 600px;
 }
