@@ -648,3 +648,32 @@ only screen and (-webkit-min-device-pixel-ratio : 1.5),
 only screen and (min-device-pixel-ratio : 1.5) {
     /* Styles */
 }
+
+
+/* damir's changes */
+
+/* @TODO: add prefixes to css3 rules (or preferably install a css autoprefixer)
+
+/*  global > navbar */
+
+#trigger-overlay {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 0.15em;
+    z-index: 10;
+    cursor: pointer;
+    border: 0.15em solid #fff;
+    border-radius: 0.15em;
+    background-color: #4CAF50;
+    color: #fff;
+    line-height: 0;
+    transition: all 500ms;
+}
+
+#trigger-overlay:hover {
+    background-color: #FF5252;
+}
+
+/* landing > introduction */
+
