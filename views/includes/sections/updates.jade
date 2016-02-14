@@ -1,52 +1,48 @@
 // Updates
-section#upcoming
-.updates
-    .row.remove-margin-bottom
-        .col.s12
-            .container
-                h2 Upcoming
-                .row
-                    .col.s12
-                        p.flow-text This is a collaborative project that is seeking innovative Bangladeshi folks across the diaspora who are seeking to work in Bangladeshi community to design a political theater and digital archive collective. We're looking for Bangladeshi artists, creators, writers, visionaries and changemakers. <strong>Are you a graphic designer? Singer? Documentarian? Painter? Actress? We'd love to collaborate with you!</strong>
-                        a.waves-effect.waves-light.btn.btn-large(href='#contact')
-                            i.material-icons.right send
-                            | Contact
-                .row.remove-margin-bottom.padding-bottom
-                    .col.m7.s12
-                        h3 Events
-                        .row.remove-margin-bottom.valign-wrapper
-                        for event in events
-                            - var name = event.name;
-                            - var date = event.date.match(/[A-Za-z]{1,}\s[A-Za-z]{1,}\s[0-9]{1,}/g);
-                            - var description = event.description;
-                            - var image = event.image;
-                            .card.white
-                                .card-image
-                                    img(src!= image)
-                                    h5.card-title
-                                        | #{name}
-                                .card-content
-                                    p
-                                        | #{description}
-                                .card-action.right-align
-                                    a(href='#') #{date}
-                    .col.m5.s12
-                        .row.remove-margin-bottom.valign-wrapper
-                            .col.s10.valign
-                                h3 Twitter
-                            .col.s2.valign.right-align
-                                a.waves-effect.waves-light.btn.btn-floating(href!= 'http://twitter.com/' + tweeter, target='_blank') @
-                        a.twitter-timeline(data-dnt='true',data-tweet-limit="4" ,href='https://twitter.com/bangladeshistry',data-chrome='noheader noborders transparent' , data-widget-id='696477616530964482') Tweets by @bangladeshistry
-                        script.
-                            !function (d, s, id) {
-                                var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
-                                if (!d.getElementById(id)) {
-                                    js = d.createElement(s);
-                                    js.id = id;
-                                    js.src = p + "://platform.twitter.com/widgets.js";
-                                    fjs.parentNode.insertBefore(js, fjs);
-                                }
-                            }(document, "script", "twitter-wjs");
+section#updates.updates
+    .container
+        h4.heading Upcoming
+        p.flow-text This is a collaborative project that is seeking innovative Bangladeshi folks across the diaspora who are seeking to work in Bangladeshi community to design a political theater and digital archive collective. We're looking for Bangladeshi artists, creators, writers, visionaries and changemakers. <strong>Are you a graphic designer? Singer? Documentarian? Painter? Actress? We'd love to collaborate with you!</strong>
+        a.waves-effect.waves-light.btn.btn-large(href='#contact')
+            i.material-icons.right send
+            | Contact
+
+        .row
+            .col.m7.events
+                h4.heading Events
+
+                .event-cards
+                    for event in events
+                        - var name = event.name;
+                        - var date = event.date.match(/[A-Za-z]{1,}\s[A-Za-z]{1,}\s[0-9]{1,}/g);
+                        - var description = event.description;
+                        - var image = event.image;
+                        .card.white
+                            .card-image
+                                img(src!= image)
+                                h5.card-title
+                                    | #{name}
+                            .card-content
+                                p
+                                    | #{description}
+                            .card-action.right-align
+                                a(href='#') #{date}
+            .col.m5.twitter
+                h4.heading Twitter
+                    a.heading-icon.waves-effect.waves-light.btn.btn-floating(href!= 'http://twitter.com/' + tweeter, target='_blank') @
+
+                a.twitter-timeline(data-dnt='true',data-tweet-limit="4" ,href='https://twitter.com/bangladeshistry',data-chrome='noheader noborders transparent' , data-widget-id='696477616530964482') Tweets by @bangladeshistry
+
+                script.
+                    !function (d, s, id) {
+                        var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+                        if (!d.getElementById(id)) {
+                            js = d.createElement(s);
+                            js.id = id;
+                            js.src = p + "://platform.twitter.com/widgets.js";
+                            fjs.parentNode.insertBefore(js, fjs);
+                        }
+                    }(document, "script", "twitter-wjs");
 
 
 

@@ -578,26 +578,6 @@ and (min-width : 1224px) {
     }
 }
 
-/* Large screens ----------- */
-@media only screen
-and (min-width : 1824px) {
-    .landing-header {
-        font-size: 4.5rem;
-    }
-
-    /* Menu style */
-    .overlay ul {
-        margin: 0 auto;
-        list-style: none;
-        padding: 0;
-        font-size: 4.5rem;
-    }
-
-    .description {
-        font-size: 1.5rem;
-    }
-}
-
 /* damir's changes */
 
 /* @TODO: add prefixes to css3 rules (or preferably install a css autoprefixer)
@@ -633,6 +613,16 @@ and (min-width : 1824px) {
     background-color: #FF5252;
 }
 
+@media (min-width: 960px) {
+
+    #overlay ul {
+        margin: 0 auto;
+        list-style: none;
+        padding: 0;
+        font-size: 4.5rem;
+    }
+}
+
 /* header landing */
 
 #landing {
@@ -650,6 +640,7 @@ and (min-width : 1824px) {
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
+    box-shadow: 0 -0.5em 1em -0.5em rgba(0, 0, 0, 0.5) inset;
     background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.5)),url('../images/backgrounds/background.jpg');
     background-size: cover;
     background-attachment: fixed;
@@ -690,6 +681,7 @@ and (min-width : 1824px) {
 }
 
 @media (min-width: 768px) {
+
     #landing .landing-header {
         font-size: 3.5rem;
     }
@@ -700,6 +692,7 @@ and (min-width : 1824px) {
 }
 
 @media (min-width: 980px) {
+
     #landing .landing-header {
         font-size: 4.5rem;
     }
@@ -716,7 +709,8 @@ and (min-width : 1824px) {
 }
 
 #site .container {
-    margin: 1em auto;
+    margin: 0 auto;
+    padding: 1em 0;
 }
 
 #site .container > .row .col {
@@ -726,25 +720,40 @@ and (min-width : 1824px) {
 @media (min-width: 480px) {
 
     #site .container {
-        margin: 2em auto;
+        padding-top: 2em;
+        padding-bottom: 2em
     }
 }
 
 @media (min-width: 768px) {
 
+    #site {
+        margin-top: 3em;
+    }
+
     #site .container {
-        margin: 4em auto;
+        padding-top: 3em;
+        padding-bottom: 3em;
     }
 }
 
 @media (min-width: 980px) {
 
+    #site {
+        margin-top: 4em;
+    }
+
     #site .container {
-        margin: 6em auto;
+        padding-top: 4em;
+        padding-bottom: 4em;
     }
 }
 
 /* site more */
+
+#more {
+    margin-bottom: 2em;
+}
 
 @media (min-width: 480px) {
 
@@ -759,6 +768,10 @@ and (min-width : 1824px) {
 
 @media (min-width: 768px) {
 
+    #more {
+        margin-bottom: 3em;
+    }
+
     #more .work {
         padding-right: 2.5em;
     }
@@ -768,10 +781,18 @@ and (min-width : 1824px) {
     }
 }
 
+@media (min-width: 960px) {
+
+    #more {
+        margin-bottom: 4em;
+    }
+}
+
 /* site facts */
 
 #facts {
     padding: 2em 1em;
+    box-shadow: 0 0 2em -0.5em rgba(0, 0, 0, 0.5) inset;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/backgrounds/facts_background.jpg');
     background-position: center center;
     background-attachment: fixed;
