@@ -855,7 +855,24 @@ and (min-width : 1224px) {
     }
 }
 
+/* site author */
+
+#author {
+    box-shadow: 0 0 0.5em 0 rgba(0, 0, 0, 0.25) inset;
+    background-color: #FF5252;
+    color: #fff;
+}
+
+#author img.circle {
+    box-shadow: 0 0.15em 0.5em 0 rgba(0, 0, 0, 0.25);
+}
+
 /* site footer */
+
+#footer {
+    padding-top: 1em;
+    background: #F6FFF6;
+}
 
 #footer .footer-copyright {
     background: #4CAF50;
@@ -873,4 +890,18 @@ and (min-width : 1224px) {
 #footer .footer-copyright .copyright-message a {
     color: #fff;
     text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+
+    #footer {
+        padding-top: 2em;
+    }
+}
+
+@media (min-width: 960px) {
+
+    #footer {
+        padding-top: 3em;
+    }
 }
