@@ -38,6 +38,18 @@ h4 {
     font-weight: 300;
 }
 
+blockquote {
+    margin: 2em auto;
+    padding-left: 1.5rem;
+    border-left: 5px solid #4CAF50;
+}
+
+.divider {
+    width: 10em;
+    border: 0;
+    background-color: #A2A2A2;
+}
+
 /* links */
 
 a {
@@ -80,20 +92,7 @@ nav {
     line-height: 56px;
 }
 
-/* helpers */
-
-::selection {
-    color: #FF5252;
-    background:#4CAF50;
-}
-
-.height-200 {
-    max-height: 200px;
-}
-
-.card-title {
-    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
-}
+/* ui cards */
 
 .card .card-action a:not(.btn):not(.btn-large):not(.btn-floating) {
     color: #4CAF50;
@@ -103,41 +102,108 @@ nav {
     color: #FF5252;
 }
 
-footer.page-footer {
-    margin-top: 0px;
-    padding-top: 0px;
-}
+/* ui buttons */
 
-blockquote {
-    margin: 20px 0;
-    padding-left: 1.5rem;
-    border-left: 5px solid #4CAF50;
-}
-
-/* Collections */
-
-
-.collection-item a {
-    color: #000000;
+.btn {
+    box-shadow: 0 0.15em 0.5em 0 rgba(0,0,0,0.5);
+    border: 0.15em solid #212121;
+    background-color: transparent;
+    color: rgba(33, 33, 33, 0.75);
     text-decoration: none;
-    -webkit-tap-highlight-color: transparent;
+    text-align: center;
+    letter-spacing: 0.15em;
+    transition: all 500ms;
+    cursor: pointer;
 }
 
-.collection-item a:hover {
-    color: #4CAF50;
-    text-decoration: none;
-    -webkit-tap-highlight-color: transparent;
+.btn:hover {
+    box-shadow: 0 0.15em 0.25em 0 rgba(0,0,0,0.25);
+    border-color: #4CAF50;
+    background-color: #4CAF50;
+    color: #fff;
 }
 
-.collection {
-    border: 0px solid #e0e0e0;
+.btn:active {
+    box-shadow: 0 -0.15em 0.25em 0 rgba(0,0,0,0.25);
 }
 
-.collection-item {
-    border-bottom: 0px solid #e0e0e0 !important;
+/* global > helpers */
+
+::selection {
+    color: #FF5252;
+    background:#4CAF50;
 }
 
-/* Helpers */
+.disabled {
+    pointer-events: none;
+    cursor: default;
+}
+
+.height-200 {
+    max-height: 200px;
+}
+
+.clear {
+    clear: both;
+}
+
+/* helpers typography */
+
+.line-break {
+    display: block;
+}
+
+.text-stroke {
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5), 1px -1px 0 rgba(0, 0, 0, 0.5), -1px 1px 0 rgba(0, 0, 0, 0.5), 1px 1px 0 rgba(0, 0, 0, 0.5);
+}
+
+.sub {
+    color: #ffffff;
+}
+
+.smaller {
+    font-size: 75%;
+}
+
+.smallest {
+    font-size: 65%;
+    font-style: italic;
+}
+
+.remove-font-styles {
+    color: rgba(0,0,0,0.87) !important;
+}
+
+.my-lists {
+    padding-left: 2.33rem;
+    padding-right: 2.33rem;}
+
+.my-list-item {
+    list-style-type: disc;
+}
+
+/* helpers > spacing */
+
+.top-content {
+    padding-bottom: 2rem;
+}
+
+.bottom-content-padding-bottom {
+    padding-bottom:2rem;
+}
+
+.padding-top {
+    padding-top: 2.5rem;
+}
+
+.padding-bottom {
+    padding-bottom: 2.5rem;
+}
+
+.padding-right {
+    padding-right: 0.75rem;
+}
+
 .remove-margin-bottom {
     margin-bottom: 0px !important;
 }
@@ -163,172 +229,18 @@ blockquote {
     text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
 }
 
-.description {
-    letter-spacing: 0.25rem;
-    font-weight: 400;
+.chips-padding {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
 }
 
-.post-header {
-    letter-spacing: 0.25rem;
-    font-weight: 700;
+/* chip restores padding */
+.chip {
+    margin-left: 2px !important;
+    margin-bottom: 2px !important;
 }
 
-.post-description {
-    letter-spacing: 0.25rem;
-    font-weight: 400;
-}
-
-/* Stories */
-.stories {
-    background-color: #ffffff;
-}
-
-/* Facts */
-.facts {
-    background-color: #212121;
-}
-
-/* Author */
-.author {
-    background-color: #424242;
-}
-
-/* Updates */
-.updates {
-    background-color: #C8E6C9;
-}
-
-.clear {
-    clear: both;
-}
-
-.portfolio .portfolio-holder {
-    clear: both;
-    text-align: center;
-}
-
-.portfolio img {
-    width: 25%;
-    display: inline-block;
-    float: left;
-}
-
-/* buttons */
-
-.btn {
-    box-shadow: 0 0.15em 0.5em 0 rgba(0,0,0,0.5);
-    border: 0.15em solid #212121;
-    background-color: transparent;
-    color: rgba(33, 33, 33, 0.75);
-    text-decoration: none;
-    text-align: center;
-    letter-spacing: 0.15em;
-    transition: all 500ms;
-    cursor: pointer;
-}
-
-.btn:hover {
-    box-shadow: 0 0.15em 0.25em 0 rgba(0,0,0,0.25);
-    border-color: #4CAF50;
-    background-color: #4CAF50;
-    color: #fff;
-}
-
-.btn:active {
-    box-shadow: 0 -0.15em 0.25em 0 rgba(0,0,0,0.25);
-}
-
-
-/* ==========================================================================
-   Screen size agnostic
-   ========================================================================== */
-
-/* Menu */
-/* Overlay style */
-.overlay {
-    font-family: 'samarkanoblique';
-    font-weight: 100;
-    font-style: normal;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: #4CAF50;
-    z-index: 10;
-}
-
-/* Overlay closing cross */
-.overlay .overlay-close {
-    /* Styles */
-}
-.overlay .close-button {
-    cursor: pointer;
-    position: absolute;
-    right: 20px;
-    top: 15px;
-    border: none;
-    z-index: 10;
-}
-
-.overlay ul li {
-    padding-bottom: 10px;
-    min-height: 54px;
-}
-
-.overlay ul li a {
-    color: #fff;
-    -webkit-transition: color 0.2s;
-    transition: color 0.2s;
-}
-
-.overlay ul li a:hover,
-.overlay ul li a:focus {
-    color: #FF5252;
-}
-
-/* Effects */
-.overlay-hugeinc {
-    opacity: 0;
-    visibility: hidden;
-    -webkit-transition: opacity 0.5s, visibility 0s 0.5s;
-    transition: opacity 0.5s, visibility 0s 0.5s;
-}
-
-.overlay-hugeinc.open {
-    opacity: 1;
-    visibility: visible;
-    -webkit-transition: opacity 0.5s;
-    transition: opacity 0.5s;
-}
-
-.overlay-hugeinc {
-    -webkit-perspective: 1200px;
-    perspective: 1200px;
-}
-
-.overlay-hugeinc ul {
-    opacity: 0.4;
-    -webkit-transform: translateY(-25%) rotateX(35deg);
-    transform: translateY(-25%) rotateX(35deg);
-    -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
-    transition: transform 0.5s, opacity 0.5s;
-}
-
-.overlay-hugeinc.open ul {
-    opacity: 1;
-    -webkit-transform: rotateX(0deg);
-    transform: rotateX(0deg);
-}
-
-.overlay-hugeinc.close ul {
-    -webkit-transform: translateY(25%) rotateX(-35deg);
-    transform: translateY(25%) rotateX(-35deg);
-}
-
-.remove-font-styles {
-    color: rgba(0,0,0,0.87) !important;
-}
+/* helpers > git */
 
 .git-data {
     border-right: solid #E4E4E4;
@@ -339,60 +251,7 @@ blockquote {
     max-width: 250px;
 }
 
-.sub {
-    color: #ffffff;
-}
-
-.chips-padding {
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
-}
-
-.padding-top {
-    padding-top: 2.5rem;
-}
-
-.padding-bottom {
-    padding-bottom: 2.5rem;
-}
-
-.padding-right {
-    padding-right: 0.75rem;
-}
-
-.smaller {
-    font-size: 75%;
-}
-
-.smallest {
-    font-size: 65%;
-    font-style: italic;
-}
-
-.top-content {
-    padding-bottom: 2rem;
-}
-
-.bottom-content-padding-bottom {
-    padding-bottom:2rem;
-}
-
-.disabled {
-    pointer-events: none;
-    cursor: default;
-}
-
-.my-lists {
-    padding-left: 2.33rem;
-    padding-right: 2.33rem;}
-
-.my-list-item {
-    list-style-type: disc;
-}
-
-/* ==========================================================================
-   Materialize helper classes
-   ========================================================================== */
+/* helpers > forms */
 
 /* Placeholder */
 input::placeholder {
@@ -465,131 +324,44 @@ input::placeholder {
     color: #4CAF50;
 }
 
-/* Chip, restore padding */
-.chip {
-    margin-left: 2px !important;
-    margin-bottom: 2px !important;
+/* global > effects */
+
+.overlay-hugeinc {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.5s, visibility 0s 0.5s;
+    transition: opacity 0.5s, visibility 0s 0.5s;
 }
 
-/*
-* From css-tricks.com
-* http://css-tricks.com/snippets/css/media-queries-for-standard-devices/
-*/
-
-/* Smartphones (portrait and landscape) ----------- */
-@media only screen
-and (min-device-width : 320px)
-and (max-device-width : 480px) {
-    .description {
-        font-size: 1.25rem;
-    }
-
-    .landing-header {
-        font-size: 2.25rem;
-    }
-
-    /* Menu style */
-    .overlay ul {
-        margin: 0 auto;
-        list-style: none;
-        padding: 0;
-        font-size: 2.25rem;
-    }
+.overlay-hugeinc.open {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: opacity 0.5s;
+    transition: opacity 0.5s;
 }
 
-/* Smartphones (landscape) ----------- */
-@media only screen
-and (min-width : 321px) {
-    .description {
-        font-size: 1rem;
-    }
-
-    .landing-header {
-        font-size: 2rem;
-    }
-
-    /* Menu style */
-    .overlay ul {
-        margin: 0 auto;
-        list-style: none;
-        padding: 0;
-        font-size: 2rem;
-    }
+.overlay-hugeinc {
+    -webkit-perspective: 1200px;
+    perspective: 1200px;
 }
 
-/* iPads (portrait and landscape) ----------- */
-@media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px) {
-    .description {
-        font-size: 1.5rem;
-    }
-
-    .landing-header {
-        font-size: 3.5rem;
-    }
-
-    /* Menu style */
-    .overlay ul {
-        margin: 0 auto;
-        list-style: none;
-        padding: 0;
-        font-size: 3.5rem;
-    }
+.overlay-hugeinc ul {
+    opacity: 0.4;
+    -webkit-transform: translateY(-25%) rotateX(35deg);
+    transform: translateY(-25%) rotateX(35deg);
+    -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+    transition: transform 0.5s, opacity 0.5s;
 }
 
-/* iPads (landscape) ----------- */
-@media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px)
-and (orientation : landscape) {
-    /* Styles */
+.overlay-hugeinc.open ul {
+    opacity: 1;
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
 }
 
-/* iPads (portrait) ----------- */
-@media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px)
-and (orientation : portrait) {
-    /* Styles */
-}
-
-/* Desktops and laptops ----------- */
-@media only screen
-and (min-width : 1224px) {
-    .description {
-        font-size: 2rem;
-    }
-
-    .landing-header {
-        font-size: 4rem;
-    }
-
-    /* Menu style */
-    .overlay ul {
-        margin: 0 auto;
-        list-style: none;
-        padding: 0;
-        font-size: 4rem;
-    }
-
-    .flow-text {
-        font-size: 1.5em;
-    }
-}
-
-/* damir's changes */
-
-/* @TODO: add prefixes to css3 rules (or preferably install a css autoprefixer)
-
-/* global > helpers */
-
-.line-break {
-    display: block;
-}
-
-.text-stroke {
-    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5), 1px -1px 0 rgba(0, 0, 0, 0.5), -1px 1px 0 rgba(0, 0, 0, 0.5), 1px 1px 0 rgba(0, 0, 0, 0.5);
+.overlay-hugeinc.close ul {
+    -webkit-transform: translateY(25%) rotateX(-35deg);
+    transform: translateY(25%) rotateX(-35deg);
 }
 
 /* global > navbar */
@@ -613,12 +385,58 @@ and (min-width : 1224px) {
     background-color: #4CAF50;
 }
 
+/* global > menu */
+
+.overlay {
+    font-family: 'samarkanoblique', 'Open Sans', Helvetica, sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #4CAF50;
+    z-index: 10;
+}
+
+/* Overlay closing cross */
+
+.overlay .close-button {
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    border: none;
+    z-index: 10;
+}
+
+.overlay ul {
+    font-size: 2.5rem;
+    padding: 0;
+    list-style: none;
+}
+
+.overlay ul li {
+    padding-bottom: 10px;
+    min-height: 54px;
+}
+
+.overlay ul li a {
+    color: #fff;
+    -webkit-transition: color 500ms;
+    transition: color 500ms;
+}
+
+.overlay ul li a:hover,
+.overlay ul li a:focus {
+    color: #FF5252;
+}
+
 @media (min-width: 960px) {
 
-    #overlay ul {
+    .overlay ul {
         margin: 0 auto;
-        list-style: none;
-        padding: 0;
         font-size: 4.5rem;
     }
 }
@@ -668,14 +486,14 @@ and (min-width : 1224px) {
 
 #landing .landing-description {
     font-size: 1.25rem;
+    font-style: italic;
+    font-weight: 100;
 }
 
 #landing .landing-description .morphext {
     display: block;
     text-shadow: 0.05em 0.10em 0.15em rgba(0, 0, 0, 0.5);
     font-size: 1.5rem;
-    font-style: italic;
-    font-weight: 100;
     letter-spacing: 0.15em;
 }
 
