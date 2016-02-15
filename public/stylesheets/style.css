@@ -46,13 +46,13 @@ a {
 }
 
 a {
-    color: #4CAF50;
+    color: #FF5252;
     cursor: pointer;
 }
 
 a:hover {
     cursor: pointer;
-    color: #FF5252;
+    color: #4CAF50;
     text-decoration: none;
     -webkit-tap-highlight-color: transparent;
 }
@@ -255,7 +255,7 @@ blockquote {
     top: 0;
     left: 0;
     background: #4CAF50;
-    z-index: 10000000;
+    z-index: 10;
 }
 
 /* Overlay closing cross */
@@ -268,7 +268,7 @@ blockquote {
     right: 20px;
     top: 15px;
     border: none;
-    z-index: 10000001;
+    z-index: 10;
 }
 
 .overlay ul li {
@@ -598,19 +598,19 @@ and (min-width : 1224px) {
     position: fixed;
     bottom: 0;
     right: 0;
-    margin: 0.15em;
+    margin: 0.35em;
     z-index: 10;
     cursor: pointer;
     border: 0.15em solid #fff;
     border-radius: 0.15em;
-    background-color: #4CAF50;
+    background-color: #FF5252;
     color: #fff;
     line-height: 0;
     transition: all 500ms;
 }
 
 #trigger-overlay:hover {
-    background-color: #FF5252;
+    background-color: #4CAF50;
 }
 
 @media (min-width: 960px) {
@@ -673,11 +673,10 @@ and (min-width : 1224px) {
 #landing .landing-description .morphext {
     display: block;
     text-shadow: 0.05em 0.10em 0.15em rgba(0, 0, 0, 0.5);
-    font-family: 'samarkanoblique', 'Open Sans', Helvetica, sans-serif;
     font-size: 1.5rem;
     font-style: italic;
-    font-weight: 400;
-    letter-spacing: 0.5em;
+    font-weight: 100;
+    letter-spacing: 0.15em;
 }
 
 @media (min-width: 768px) {
@@ -709,11 +708,10 @@ and (min-width : 1224px) {
 }
 
 #site .container {
-    margin: 0 auto;
     padding: 1em 0;
 }
 
-#site .container > .row .col {
+#site .container .row .col {
     margin: 1em auto;
 }
 
@@ -752,7 +750,7 @@ and (min-width : 1224px) {
 /* site more */
 
 #more {
-    margin-bottom: 2em;
+    margin-bottom: 1em;
 }
 
 @media (min-width: 480px) {
@@ -769,7 +767,7 @@ and (min-width : 1224px) {
 @media (min-width: 768px) {
 
     #more {
-        margin-bottom: 3em;
+        margin-bottom: 2em;
     }
 
     #more .work {
@@ -784,7 +782,7 @@ and (min-width : 1224px) {
 @media (min-width: 960px) {
 
     #more {
-        margin-bottom: 4em;
+        margin-bottom: 3em;
     }
 }
 
@@ -816,4 +814,63 @@ and (min-width : 1224px) {
 
 #facts .container {
     max-width: 600px;
+}
+
+/* site updates */
+
+#updates {
+    box-shadow: 0 -0.5em 0.5em -0.5em rgba(0, 0, 0, 0.25) inset;
+    background-color: #F6FFF6;
+}
+
+#updates .container .row {
+    margin-top: 3em;
+}
+
+#updates .twitter .heading-icon {
+    margin-left: 0.5em;
+    padding: 0;
+    border: 0;
+    background-color: #FF5252;
+    color: #fff;
+    font-size: 1.5rem;
+    letter-spacing: 0;
+}
+
+#updates .twitter .heading-icon:hover {
+    background-color: #4CAF50;
+}
+
+@media (min-width: 768px) {
+
+    #updates .heading {
+        margin-top: 1em;
+    }
+}
+
+@media (min-width: 960px) {
+
+    #updates .heading {
+        margin-top: 2em;
+    }
+}
+
+/* site footer */
+
+#footer .footer-copyright {
+    background: #4CAF50;
+}
+
+#footer .footer-copyright .copyright-message {
+    padding: 0;
+    color: #fff;
+}
+
+#footer .footer-copyright .copyright-message p {
+    margin: 0;
+}
+
+#footer .footer-copyright .copyright-message a {
+    color: #fff;
+    text-decoration: underline;
 }
