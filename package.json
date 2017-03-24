@@ -1,7 +1,7 @@
 {
-  "name": "boilerplate-es6",
-  "version": "0.2.6",
-  "description": "boilerplate-es6 is a template for your es6 based projects using",
+  "name": "bangladeshi-history",
+  "version": "2.0.0",
+  "description": "A digital archive documenting Bangladeshi history, art, people, culture, lives, stories, politics, revolution & rebellion.",
   "keywords": [
     "es6",
     "gulp",
@@ -14,8 +14,8 @@
   },
   "license": "MIT",
   "author": {
-    "name": "Stefan Walther",
-    "url": "https://github.com/stefanwalther",
+    "name": "Sajjad Hossain",
+    "url": "https://github.com/sajjadhossain",
     "twitter": "waltherstefan"
   },
   "files": [
