@@ -1,9 +1,9 @@
+## Install
 
 ```sh
 ## Clone the repo
-$ git clone git@github.com:stefanwalther/boilerplate-es6.git
+$ git clone https://github.com/bangladeshihistory/site.git
 
 ## Install all dependencies
 $ npm install
 ```
-

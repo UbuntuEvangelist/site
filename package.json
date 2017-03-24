@@ -16,13 +16,13 @@
   "author": {
     "name": "Sajjad Hossain",
     "url": "https://github.com/sajjadhossain",
-    "twitter": "waltherstefan"
+    "twitter": "bangladeshistry"
   },
   "files": [
     "/dist"
   ],
   "main": "/dist/index.js",
-  "repository": "stefanwalther/boilerplate-es6",
+  "repository": "bangladeshihistory/site",
   "scripts": {
     "build": "gulp build",
     "coverage": "babel-node ./node_modules/.bin/isparta cover _mocha",
@@ -33,7 +33,9 @@
     "test:integration": "npm run lint && mocha './test/integration/**/*.spec.js' --compilers js:babel-core/register --require './test/mocha.conf.js'",
     "test:unit": "mocha './test/unit/**/*.spec.js' --compilers js:babel-core/register --require './test/mocha.conf.js'"
   },
-  "dependencies": {},
+  "dependencies": {
+    "isparta": "^4.0.0"
+  },
   "devDependencies": {
     "babel-core": "^6.11.4",
     "babel-plugin-istanbul": "^1.0.3",
