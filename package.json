@@ -13,7 +13,7 @@
     "express": "~4.13.1",
     "jade": "^1.11.0",
     "morgan": "~1.6.1",
-    "nodemailer": "^2.0.0",
+    "nodemailer": "^6.6.1",
     "serve-favicon": "~2.3.0",
     "simple-twitter": "^1.0.7",
     "writeson": "^1.0.1"
